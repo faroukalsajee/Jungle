@@ -1,7 +1,9 @@
 class OrdersController < ApplicationController
+  # before_filter :authorize
 
   def show
     @order = Order.find(params[:id])
+    @line_items = @order.line_items
   end
 
   def create
@@ -29,7 +31,7 @@ class OrdersController < ApplicationController
   def perform_stripe_charge
     Stripe::Charge.create(
       source:      params[:stripeToken],
-      amount:      cart_subtotal_cents,
+      amount:      cart_subtotal,
       description: "Khurram Virani's Jungle Order",
       currency:    'cad'
     )
