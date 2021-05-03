@@ -1,5 +1,6 @@
 class Admin::CategoriesController < ApplicationController
 
+  puts ENV['USERNAME'] 
   http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD']
 
   def index
