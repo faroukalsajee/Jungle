@@ -1,55 +1,63 @@
 # Jungle
+
 A mini e-commerce application built with Ruby (-v2.3.5) on Rails (-v4.2) as a student assignment for Lighhouse Labs full-stack web development program. TDD (test-driven development) practices are followed using RSpec library. Stripe platform is used for payments.
 
-# Functional Requirements
-## Feature: Sold Out Badge
-* When a product has 0 quantity, a sold out badge should be displayed on the product list page
-* Should ideally be implemented as a question/boolean method in view helper and/or Product model
+## Functional Requirements
 
-## Feature: Admin Categories
-* Admin users can list and create new categories
-* Admins can add new products using the new category
-* Restful routes (resources) should be used, and there should be no extra, unused routes exposed
-* All admin controllers inherit from Admin::BaseController (or similarly named) abstract controller, containing the authentication filter
+### Feature: Sold Out Badge
 
-## Feature: User Authentication
-* As a Visitor I can go to the registration page from any page in order to create an account
-* As a Visitor I can sign up for a user account with my e-mail, password, first name and last name
-* As a Visitor I can sign in using my e-mail and password
-* As a User I can log out from any page
-* As a User I cannot sign up with an existing e-mail address (uniqueness validation)
-* Passwords are not stored as plain text in the database. Instead, has_secure_password is used in the User model, leveraging the bcrypt gem
+- When a product has 0 quantity, a sold out badge should be displayed on the product list page
+- Should ideally be implemented as a question/boolean method in view helper and/or Product model
 
-## Enhancement: Order Details Page
-* The order page contains items, their image, name, description, quantities and line item totals
-* The final amount for the order is displayed
-* The email that was used to place the order is displayed
-* As a Visitor I can place an order (i.e. without logging in and therefore without an e-mail address). The original functionality from the inherited code (even though it is not realistic) should therefore not be suppressed.
+### Feature: Admin Categories
 
-## Bug: Missing Admin Security
-* User must enter HTTP auth login/password to access admin functionality
-* Should ideally be implemented in an abstract top-level class for admin controllers (e.g., Admin::BaseController which the other concrete admin controllers inherit)
+- Admin users can list and create new categories
+- Admins can add new products using the new category
+- Restful routes (resources) should be used, and there should be no extra, unused routes exposed
+- All admin controllers inherit from Admin::BaseController (or similarly named) abstract controller, containing the authentication filter
 
-## Bug: Checking Out with Empty Cart
-* When the cart is empty and the user goes to the carts#show page, instead of displaying the contents and a stripe checkout button, display a friendly message about how it is empty and link to the home page
+### Feature: User Authentication
 
-## Git
-* The git commit history should have multiple commits and reasonable commit messages. There should be good use of branching and merging for each feature.
+- As a Visitor I can go to the registration page from any page in order to create an account
+- As a Visitor I can sign up for a user account with my e-mail, password, first name and last name
+- As a Visitor I can sign in using my e-mail and password
+- As a User I can log out from any page
+- As a User I cannot sign up with an existing e-mail address (uniqueness validation)
+- Passwords are not stored as plain text in the database. Instead, has_secure_password is used in the User model, leveraging the bcrypt gem
+
+### Enhancement: Order Details Page
+
+- The order page contains items, their image, name, description, quantities and line item totals
+- The final amount for the order is displayed
+- The email that was used to place the order is displayed
+- As a Visitor I can place an order (i.e. without logging in and therefore without an e-mail address). The original functionality from the inherited code (even though it is not realistic) should therefore not be suppressed.
+
+### Bug: Missing Admin Security
+
+- User must enter HTTP auth login/password to access admin functionality
+- Should ideally be implemented in an abstract top-level class for admin controllers (e.g., Admin::BaseController which the other concrete admin controllers inherit)
+
+### Bug: Checking Out with Empty Cart
+
+- When the cart is empty and the user goes to the carts#show page, instead of displaying the contents and a stripe checkout button, display a friendly message about how it is empty and link to the home page
+
+### Git
+
+- The git commit history should have multiple commits and reasonable commit messages. There should be good use of branching and merging for each feature.
 
 ## Project Screenshots
 
-![](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.45.54%20PM.png)
-![](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.47.02%20PM.png)
-![](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.50.35%20PM.png)
-![](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.46.14%20PM.png)
-
+![homepage](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.45.54%20PM.png)
+![product](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.47.02%20PM.png)
+![cart](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.50.35%20PM.png)
+![checkout](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.46.14%20PM.png)
 
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
-1. Install ImageMagick `brew install imagemagick imagemagick@6 --build-from-source`
-2. Remove Gemfile.lock
-3. Replace Gemfile with version provided [here](https://gist.githubusercontent.com/FrancisBourgouin/831795ae12c4704687a0c2496d91a727/raw/ce8e2104f725f43e56650d404169c7b11c33a5c5/Gemfile)
+2. Install ImageMagick `brew install imagemagick imagemagick@6 --build-from-source`
+3. Remove Gemfile.lock
+4. Replace Gemfile with version provided [here](https://gist.githubusercontent.com/FrancisBourgouin/831795ae12c4704687a0c2496d91a727/raw/ce8e2104f725f43e56650d404169c7b11c33a5c5/Gemfile)
 
 ## Setup
 
@@ -70,6 +78,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
 
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe
+- Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+- PostgreSQL 9.x
+- Stripe
