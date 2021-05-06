@@ -36,6 +36,14 @@ A mini e-commerce application built with Ruby (-v2.3.5) on Rails (-v4.2) as a st
 ## Git
 * The git commit history should have multiple commits and reasonable commit messages. There should be good use of branching and merging for each feature.
 
+## Project Screenshots
+
+![](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.45.54%20PM.png)
+![](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.47.02%20PM.png)
+![](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.50.35%20PM.png)
+![](https://github.com/faroukalsajee/Jungle/blob/master/docs/Screen%20Shot%202021-05-05%20at%205.46.14%20PM.png)
+
+
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
